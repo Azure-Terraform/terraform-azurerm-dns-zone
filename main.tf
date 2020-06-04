@@ -9,8 +9,8 @@ resource "azurerm_dns_zone" "sre" {
 # IOG Resources
 resource "azurerm_dns_ns_record" "iog" {
     
-  provider = "azurerm.iog"
-  name                = "${lower(var.domain_prefix)}"
+  provider            = azurerm.iog
+  name                = lower(var.domain_prefix)
   zone_name           = "lnrisk.io"
   resource_group_name = var.iog_resource_group_name
   ttl                 = 300
