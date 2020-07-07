@@ -3,14 +3,15 @@ terraform {
 }
 
 provider "azurerm" {
+  alias = "child"
+  subscription_id = var.child_domain_subscription_id
   version = ">= 2.0.0"
   features {}
-  subscription_id = var.sre_subscription_id
 }
 
 provider "azurerm" {
+  alias = "parent"
+  subscription_id = var.parent_domain_subscription_id
   version = ">= 2.0.0"
   features {}
-  alias = "iog"
-  subscription_id = var.iog_subscription_id
 }
