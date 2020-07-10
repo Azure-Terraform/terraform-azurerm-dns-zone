@@ -4,12 +4,12 @@ variable "child_domain_subscription_id" {
 }
 
 variable "child_domain_resource_group_name" {
-  description = "Name of the target resource group"
+  description = "name of the target resource group"
   type = string
 }
 
 variable "child_domain_prefix" {
-  description = "child domain prefix (<child>.<domain>.<prefix>.<parent domain>)"
+  description = "child domain prefix (<child_domain_prefix>.<parent_domain>)"
   type = string
 }
 
@@ -19,12 +19,12 @@ variable "parent_domain_subscription_id" {
 }
 
 variable "parent_domain_resource_group_name" {
-  description = "Name of the parent resource_group - This is the owner of the root domain"
+  description = "name of the pre-existing parent resource_group - This is the owner of the root domain"
   type = string
 }
 
 variable "parent_domain" {
-  description = "parent domain"
+  description = "pre-existing parent domain in which to create the NS record for the child domain"
   type        = string
 }
 
