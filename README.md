@@ -66,5 +66,3 @@ output "domain" {
 #
 #domain = prod.west.example.com
 ~~~~
-
-}
