@@ -36,3 +36,33 @@ This module will create a Delegated DNS Zone in an existing DNS zone in Azure.
 | id | id of dns child zone |
 | name | The DNS zone that has been delegated to you |
 <!--- END_TF_DOCS --->
+
+~~~~
+module "dns" {
+  source = "github.com/Azure-Terraform/terraform-azurerm-dns-zone.git"
+
+  child_domain_resource_group_name = "child-domain-resource-group"
+  child_domain_subscription_id     = "00000-0000-0000-0000-0000000"
+  child_domain_prefix              = "prod.west"
+
+  parent_domain_resource_group_name = "parent-domain-resource-group"
+  parent_domain_subscription_id     = "11111-1111-1111-1111-111111"
+  parent_domain                     = "example.com"
+
+  tags = { "environment" = "production"
+           "location"    = "west" }
+}
+
+output "domain" {
+  value = module.dns.name
+}
+
+##### RESULT #####
+#Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+#
+#Outputs:
+#
+#domain = prod.west.example.com
+~~~~
+
+}
