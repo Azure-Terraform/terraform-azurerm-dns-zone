@@ -2,10 +2,10 @@
 
 ## Introduction
 
-This module will create a Delegated DNS Zone from LNRisk.io in Azure.
-<br />
-The Delegated zone will be created using the Azure subscription name
-<br />
+This module will create a Delegated DNS Zone in an existing DNS zone in Azure. 
+* The Terraform credentials being used must have access to both the child and parent subsciptions (they may be the same).
+* child_domain_prefix may include multiple subdomains
+  - child.domain.prefix.parent.domain
 
 ## Input
 
