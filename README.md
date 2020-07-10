@@ -37,6 +37,8 @@ This module will create a Delegated DNS Zone in an existing DNS zone in Azure.
 | name | The DNS zone that has been delegated to you |
 <!--- END_TF_DOCS --->
 
+## Example
+
 ~~~~
 module "dns" {
   source = "github.com/Azure-Terraform/terraform-azurerm-dns-zone.git"
