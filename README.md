@@ -35,6 +35,8 @@ This module will create a Delegated DNS Zone in an existing DNS zone in Azure.
 |------|-------------|
 | id | id of dns child zone |
 | name | The DNS zone that has been delegated to you |
+| resource\_group\_name | The resource group which contains the child zone |
+| subscription\_id | The subscription\_id which contains the child zone |
 <!--- END_TF_DOCS --->
 
 ## Example
