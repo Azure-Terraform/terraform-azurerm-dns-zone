@@ -14,8 +14,8 @@ This module will create a Delegated DNS Zone in an existing DNS zone in Azure.
 
 | Name | Version |
 |------|---------|
-| azurerm.child | >= 2.0.0 >= 2.0.0 |
-| azurerm.parent | >= 2.0.0 >= 2.0.0 |
+| azurerm.child | >= 2.0.0 |
+| azurerm.parent | >= 2.0.0 |
 
 ## Inputs
 
